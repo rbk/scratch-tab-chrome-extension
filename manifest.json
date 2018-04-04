@@ -1,12 +1,13 @@
 {
   "name": "Scratch Tab",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "manifest_version": 2,
   "permissions" : [
     "storage",
-    "tabs"
+    "tabs",
+    "browser"
   ],
-  "description": "",
+  "description": "Tab for temporary text space. Syncs for all new tabs",
   "homepage_url": "http://richardkeller.net",
   "icons": {
     "16": "icons/icon16.png",
@@ -15,7 +16,6 @@
   },
   "default_locale": "en",
   "background" : {
-    "scripts":["src/override/main.js", "src/override/weather.js"]
   },
   "chrome_url_overrides": {
     "newtab": "src/override/override.html"
