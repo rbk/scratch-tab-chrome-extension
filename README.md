@@ -1,6 +1,3 @@
 # Scratch Tab
 
-## Todo
-- Add settings for weather
-- Random Quote, 1 per day
-- Reload weather data on 15 minute interval
+Chrome new tab override with a textarea that saves and syncs text across tabs.
