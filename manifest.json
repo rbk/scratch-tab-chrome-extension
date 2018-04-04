@@ -1,0 +1,22 @@
+{
+  "name": "Scratch Tab",
+  "version": "0.0.3",
+  "manifest_version": 2,
+  "permissions" : [
+    "storage"
+  ],
+  "description": "",
+  "homepage_url": "http://richardkeller.net",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background" : {
+    "scripts":["src/override/main.js"]
+  },
+  "chrome_url_overrides": {
+    "newtab": "src/override/override.html"
+  }
+}
