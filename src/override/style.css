@@ -37,10 +37,14 @@ body {
 }
 #weather {
   color: #a0a0a0;
-  text-align: center;
+  /* text-align: center; */
+  text-align: left;
 }
 #weather-today {
-  font-size: 34px;
+  /* font-size: 34px; */
+  font-size: 28px;
+  text-align: right;
+  margin-bottom: 5px;
 }
 #quote {
   position: fixed;
