@@ -3,7 +3,8 @@
   "version": "0.0.4",
   "manifest_version": 2,
   "permissions" : [
-    "storage"
+    "storage",
+    "tabs"
   ],
   "description": "",
   "homepage_url": "http://richardkeller.net",
