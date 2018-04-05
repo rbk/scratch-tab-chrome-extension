@@ -1,11 +1,9 @@
 {
   "name": "Scratch Tab",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "manifest_version": 2,
   "permissions" : [
-    "storage",
-    "tabs",
-    "browser"
+    "storage"
   ],
   "description": "Tab for temporary text space. Syncs for all new tabs",
   "homepage_url": "http://richardkeller.net",
