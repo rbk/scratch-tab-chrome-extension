@@ -50,7 +50,7 @@ function initInvert(){
     if (usersCode.match(code)) {
       usersCode = "";
       chrome.storage.local.get([key], function(result){
-        alert("Invert Colors!")
+        //alert("Invert Colors!")
         var obj = {}
         obj[key] = !result[key];
         chrome.storage.local.set(obj);

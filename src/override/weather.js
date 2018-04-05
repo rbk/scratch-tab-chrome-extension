@@ -14,6 +14,10 @@ function initWeather() {
       },timeout);
 
       get_forecast();
+    } else {
+      var obj = {};
+      obj[weatherActivationKey] = 0;
+      chrome.storage.local.set(obj);
     }
   });
 
@@ -22,11 +26,13 @@ function initWeather() {
   document.addEventListener("keyup", function(e) {
     usersCode = usersCode + e.key;
     if (usersCode.match(weatherCode)) {
-      alert("Tulsa Weather Activated!")
-      var obj = {}
-      obj[weatherActivationKey] = 1;
-      chrome.storage.local.set(obj);
-      window.location.reload();
+      //alert("Tulsa Weather Activated!")
+      chrome.storage.local.get([weatherActivationKey], function(result){
+        var obj = {}
+        obj[weatherActivationKey] = !result[weatherActivationKey];
+        chrome.storage.local.set(obj);
+        window.location.reload();
+      });
     }
   });
 
