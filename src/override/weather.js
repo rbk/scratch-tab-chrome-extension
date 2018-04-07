@@ -75,7 +75,6 @@ function get_forecast() {
         hi = kelvinToFahrenheit(hi);
         lo = kelvinToFahrenheit(lo);
         unique = test_unique;
-        console.log(`<div>${day} ${hi}/${lo} ${desc}</div>`);
         var string = `<div>${day} ${hi}/${lo} ${desc}</div>`;
         return acc + string;
       } else {
@@ -83,8 +82,6 @@ function get_forecast() {
       }
 
     }, '');
-
-    console.log("result", result)
 
     result_old = res.list.reduce(function(acc, curr){
       if (curr.dt_txt.match("12:00")) {

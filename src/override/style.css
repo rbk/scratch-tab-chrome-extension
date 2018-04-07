@@ -5,7 +5,14 @@ body {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   background-color: #f1f1f1;
 }
-.el {
+
+/* Experiment */
+#main_notes { 
+  display: none; 
+}
+
+#main_notes,
+#hidden-textarea {
   border-radius: 0 !important;
   padding: 20px!important;
   border: 0;
@@ -22,6 +29,12 @@ body {
   color: #22222;
   background-color: #f1f1f1;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  overflow: scroll;
+}
+body.invert #main_notes
+body.invert #hidden-textarea {
+  color: #f1f1f1;
+  background-color: #222;
 }
 #dash {
   position: fixed;
@@ -63,8 +76,4 @@ body {
   display: none;
 }
 
-body.invert .el {
-  color: #f1f1f1;
-  background-color: #222;
-}
-
+h1, h2, h3, h4 { margin-top: 0; }
