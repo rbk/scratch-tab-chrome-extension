@@ -2,14 +2,15 @@
 function initInvert(){
 
   var main = document.getElementById("hidden-textarea");
-  var key = "scratchtab_invert";
-  var code = "patrick";
+  var key = "scratchtab_nasa";
+  var code = "nasa";
+  var bodyClass = "nasa";
   var usersCode = "";
 
   // Set event
   chrome.storage.local.get([key], function(result){
     if (result[key]) {
-      document.body.classList.add('invert')
+      document.body.classList.add(bodyClass)
     } else {
       var obj = {};
       obj[key] = 0;
@@ -27,9 +28,9 @@ function initInvert(){
         obj[key] = !result[key];
         chrome.storage.local.set(obj);
         if (obj[key]) {
-          document.body.classList.add('invert');
+          document.body.classList.add(bodyClass);
         } else {
-          document.body.classList.remove('invert');
+          document.body.classList.remove(bodyClass);
         }
       })
     }

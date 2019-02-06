@@ -1,6 +1,5 @@
 function initCrossTabStorage() {
 
-
   var code = document.getElementById("hidden-textarea");
   var key = "scratchtab";
 
@@ -26,8 +25,13 @@ function initCrossTabStorage() {
     });
   });
 
+  document.addEventListener('keydown', function(e){
+    if (e.code == "Tab") {
+      return false;
+    }
+    return true;
+  });
+
 }
 
 initCrossTabStorage();
-
-

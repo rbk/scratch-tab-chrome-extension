@@ -3,12 +3,11 @@ body {
   padding: 0;
   font-size: 16px;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  background-color: #f1f1f1;
 }
 
 /* Experiment */
-#main_notes { 
-  display: none; 
+#main_notes {
+  display: none;
 }
 
 #main_notes,
@@ -28,52 +27,48 @@ body {
   font-size: 16px;
   color: #22222;
   background-color: #f1f1f1;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: inherit;
   overflow: scroll;
 }
-body.invert #main_notes
+body.invert {
+  color: #afafaf;
+}
+body.invert #main_notes,
 body.invert #hidden-textarea {
+  color: #afafaf;
+  background-color: #404040;
+}
+body.nasa {
+  background-image: url(./images/iod.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
   color: #f1f1f1;
-  background-color: #222;
+}
+body.nasa #main_notes,
+body.nasa #hidden-textarea {
+  color: #f1f1f1;
+  background-color: transparent;
 }
 #dash {
   position: fixed;
   right: 20px;
-  bottom: 20px;
-}
-#dash > div {
-  display: inline-block;
-  vertical-align: top;
-  //text-shadow: 1px 1px 1px #f1f1f1;
-  //text-shadow: 1px 1px #ff0000, -1px -1px #007eff;
-  //color: #fff;
-}
-#weather {
-  color: #a0a0a0;
-  /* text-align: center; */
-  text-align: left;
-}
-#weather-today {
-  /* font-size: 34px; */
-  font-size: 28px;
-  text-align: right;
-  margin-bottom: 5px;
-}
-#quote {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-#quote-inner {
-  max-width: 1000px;
-  margin: 0 auto 10px;
+  top: 20px;
+  color: #c1c1c1;
+  font-weight: 100;
   text-align: center;
-  color: #a0a0a0;
-  font-family: cursive;
-  font-size: 14px;
 }
+#temp {
+  text-align: center;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 36px;
+}
+
 .hidden {
   display: none;
 }
 
 h1, h2, h3, h4 { margin-top: 0; }
+
+.inline { display: inline-block; vertical-align: top; }

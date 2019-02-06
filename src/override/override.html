@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <title>chrome://newtab - Notes</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-<body class=""> 
+<body class="">
   <textarea id="hidden-textarea" class="el" spellcheck="false" placeholder="Type here..."></textarea>
   <div id="main_notes" contenteditable></div>
-  <div id="quote" class="hidden"><div id="quote-inner">The secret of getting ahead is getting started. The secret of getting started is breaking complex overwhelming tasks into small manageable tasks, and start on the first one. </div></div>
+
+  <!-- HOD bottom right -->
   <div id="dash">
-    <div id="weather" class="hidden">
-      <div id="weather-today"></div>
-      <div id="weather-forecast"></div>
-    </div>
+    <div id="temp"><span id="temp-deg"></span>&deg;</div>
+    <div id="ip"></div>
+    <div id="demo"></div>
   </div>
-  <script src="main.js"></script>
-  <script src="weather.js"></script>
-  <script src="invert.js"></script>
+
+  <script src="features/save-content.js"></script>
+  <script src="features/weather.js"></script>
+  <script src="codes/invert.js"></script>
+  <script src="codes/nasa.js"></script>
 </body>
 </html>
