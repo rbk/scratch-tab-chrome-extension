@@ -5,15 +5,9 @@ body {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
-/* Experiment */
-#main_notes {
-  display: none;
-}
-
-#main_notes,
-#hidden-textarea {
+.page {
   border-radius: 0 !important;
-  padding: 20px!important;
+  padding: 20px 120px 20px 20px!important;
   border: 0;
   position: fixed;
   top: 0;
@@ -25,16 +19,16 @@ body {
   outline: 0;
   box-sizing: border-box;
   font-size: 16px;
-  color: #22222;
+  color: #333;
   background-color: #f1f1f1;
   font-family: inherit;
   overflow: scroll;
 }
+
 body.invert {
   color: #afafaf;
 }
-body.invert #main_notes,
-body.invert #hidden-textarea {
+body.invert .page {
   color: #afafaf;
   background-color: #404040;
 }
@@ -46,29 +40,10 @@ body.nasa {
   background-position: center;
   color: #f1f1f1;
 }
-body.nasa #main_notes,
-body.nasa #hidden-textarea {
+body.nasa .page {
   color: #f1f1f1;
   background-color: transparent;
 }
-#dash {
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  color: #c1c1c1;
-  font-weight: 100;
-  text-align: center;
-}
-#temp {
-  text-align: center;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 36px;
-}
 
-.hidden {
-  display: none;
-}
-
+.text-small { font-size: 14px; }
 h1, h2, h3, h4 { margin-top: 0; }
-
-.inline { display: inline-block; vertical-align: top; }

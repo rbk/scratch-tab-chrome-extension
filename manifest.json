@@ -14,7 +14,7 @@
   },
   "default_locale": "en",
   "background" : {
-    "scripts" : ["src/override/opentab.js"]
+    "scripts" : []
   },
   "chrome_url_overrides": {
     "newtab": "src/override/override.html"

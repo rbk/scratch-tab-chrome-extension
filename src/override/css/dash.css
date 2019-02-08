@@ -1,0 +1,42 @@
+#dash {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  color: #c1c1c1;
+  font-weight: 100;
+  text-align: center;
+  z-index:9999999;
+}
+
+#temp {
+  text-align: center;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 36px;
+}
+
+body.blur .page {
+  filter: blur(3px);
+}
+
+#dash .btn {
+  background-color: transparent;
+  padding: 12px;
+  border: 1px solid #c1c1c1;
+  color: #c1c1c1;
+  outline: 0;
+  width: 75px;
+}
+
+#dash .btn.active {
+  background-color: #fff;
+  border: 1px solid #b1b1b1;
+  color: #b1b1b1;
+}
+#dash .btn:hover {
+  border: 1px solid #b1b1b1;
+  color: #b1b1b1;
+}
+
+.widget {
+  margin-bottom: 5px;
+}

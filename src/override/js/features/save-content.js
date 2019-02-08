@@ -1,6 +1,6 @@
 function initCrossTabStorage() {
 
-  var code = document.getElementById("hidden-textarea");
+  var code = document.getElementById("notes");
   var key = "scratchtab";
 
   chrome.storage.local.get([key], function(result){
