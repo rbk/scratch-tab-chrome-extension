@@ -8,12 +8,14 @@ class JsonViewer {
     this.page = document.querySelector("#json")
     this.setup()
     this.addEvents()
+    this.chromeSync()
   }
   setup(){
-    let ls = localStorage.getItem(this.storageKey)
-    if(ls) {
-      
-    }
+    chrome.storage.local.get([this.storageKey], (result) => {
+      if (result.jsonviewer) {
+        this.page.value = JSON.stringify(JSON.parse(result.jsonviewer), null, 4)
+      }
+    });
   }
   addEvents(){
     this.btn.addEventListener('click', () => {
@@ -27,8 +29,19 @@ class JsonViewer {
     })
     this.page.addEventListener('keyup', (e) => {
       if (this.temp == "KeyV") {
+        console.log("Test")
         this.temp = ""
         this.page.value = JSON.stringify(JSON.parse(this.page.value), null, 4)
+        let obj = {}
+        obj[this.storageKey] = this.page.value
+        chrome.storage.local.set(obj, function(res) {});
+      }
+    });
+  }
+  chromeSync(){
+    chrome.storage.onChanged.addListener((changes, namespace) => {
+      if(changes[this.storageKey] &&  this.page.value != changes[this.storageKey].newValue) {
+        this.page.value = changes[this.storageKey].newValue;
       }
     });
   }

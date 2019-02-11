@@ -21,8 +21,7 @@ function initCrossTabStorage() {
     var value = code.value;
     var obj = {}
     obj[key] = value
-    chrome.storage.local.set(obj, function(res) {
-    });
+    chrome.storage.local.set(obj, function(res) {});
   });
 
   document.addEventListener('keydown', function(e){

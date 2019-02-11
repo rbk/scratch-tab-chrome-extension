@@ -3,7 +3,8 @@
   "version": "0.0.7",
   "manifest_version": 2,
   "permissions" : [
-    "storage"
+    "storage",
+    "tabs"
   ],
   "description": "Tab for temporary text space. Syncs for all new tabs",
   "homepage_url": "http://richardkeller.net",
@@ -18,5 +19,11 @@
   },
   "chrome_url_overrides": {
     "newtab": "src/override/override.html"
+  },
+  "web_accessible_resources": [
+    "images/*.png"
+  ],
+  "browser_action": {
+      "default_icon": "icons/icon16.png"
   }
 }

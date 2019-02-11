@@ -2,12 +2,20 @@
 <html>
 <head>
   <title>Notes</title>
+  <link id="icon" rel="icon" type="image/png" href="chrome-extension://bjammlamgnojjliojcehhmeaolnllkkd/images/go.png"/>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <link href="css/basscss.min.css" rel="stylesheet" type="text/css" />
   <link href="css/dash.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="">
-  <textarea id="notes" class="page" spellcheck="false" placeholder="Type here..."></textarea>
+<body class="" style="background-color:#000">
+  <textarea id="notes" class="page" spellcheck="false" placeholder="Type here...">
+- styleguide
+- media player
+- pomodoro timer
+- weather app
+- chess
+- site analyzer
+  </textarea>
   <textarea id="json" class="page hide" spellcheck="false"></textarea>
 
   <div id="dash">
@@ -20,7 +28,19 @@
     <div class="widget">
       <button class="btn btn-blur">Blur</button>
     </div>
+    <div class="widget">
+      <div class="btn btn-pomodoro">
+        <div class="text-small">Pomodoro</div>
+        <div id="status-pomodoro" class="text-small"></div>
+        <div id="display-pomodoro"></div>
+      </div>
+    </div>
+    <div class="widget">
+      <div class="text-small">Music</div>
+      <div class="btn btn-play">Play</div>
+    </div>
   </div>
+  <canvas id="canvas" height="0" style="position:fixed;bottom:0;width:100%;"></canvas>
 
   <script src="js/features/save-content.js"></script>
   <script src="js/features/weather.js"></script>
@@ -28,5 +48,7 @@
   <script src="js/codes/invert.js"></script>
   <script src="js/codes/nasa.js"></script>
   <script src="js/features/blur.js"></script>
+  <script src="js/features/pomodoro.js"></script>
+  <script src="js/features/music.js"></script>
 </body>
 </html>

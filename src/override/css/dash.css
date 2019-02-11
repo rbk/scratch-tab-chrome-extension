@@ -18,11 +18,20 @@ body.blur .page {
   filter: blur(3px);
 }
 
+body.invert #dash .btn {
+  border: 1px solid #74c76e;
+}
+body.invert #dash .btn.active {
+  background-color: #74c76e;
+  border: 1px solid #74c76e;
+  color: #333;
+}
+
 #dash .btn {
   background-color: transparent;
   padding: 12px;
-  border: 1px solid #c1c1c1;
   color: #c1c1c1;
+  border: 1px solid #c1c1c1;
   outline: 0;
   width: 75px;
 }
@@ -40,3 +49,5 @@ body.blur .page {
 .widget {
   margin-bottom: 5px;
 }
+
+.text-small { font-size: 12px; }

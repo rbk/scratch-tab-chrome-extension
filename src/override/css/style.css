@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -29,8 +33,9 @@ body.invert {
   color: #afafaf;
 }
 body.invert .page {
-  color: #afafaf;
-  background-color: #404040;
+  color: #8e8e8e;
+  background-color: #212121;
+  border-left: 1px solid #74c76e;
 }
 body.nasa {
   background-image: url(./images/iod.jpg);
@@ -45,5 +50,4 @@ body.nasa .page {
   background-color: transparent;
 }
 
-.text-small { font-size: 14px; }
 h1, h2, h3, h4 { margin-top: 0; }
