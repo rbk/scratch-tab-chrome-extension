@@ -35,10 +35,9 @@ body.invert {
 body.invert .page {
   color: #8e8e8e;
   background-color: #212121;
-  border-left: 1px solid #74c76e;
 }
 body.nasa {
-  background-image: url(./images/iod.jpg);
+  background-image: url(../images/iod.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
