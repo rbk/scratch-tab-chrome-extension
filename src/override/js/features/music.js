@@ -14,8 +14,10 @@ return  window.requestAnimationFrame       ||
 };
 })();
 
-var HEIGHT = 360
-var WIDTH = window.width
+var WIDTH = 640;
+var HEIGHT = 360;
+var SMOOTHING = 0.8;
+var FFT_SIZE = 2048;
 
 class Music {
   constructor() {
@@ -91,18 +93,16 @@ class Music {
       var height = HEIGHT * percent;
       var offset = HEIGHT - height - 1;
       var barWidth = WIDTH/this.analyser.frequencyBinCount;
-      var hue = i / this.analyser.frequencyBinCount * 360;
+      var hue = i/this.analyser.frequencyBinCount * 360;
       this.drawContext.fillStyle = 'hsl(' + hue + ', 100%, 50%)';
-      this.drawContext.fillStyle = '#74c76e';
-      this.drawContext.fillRect(i, offset, 1, 10);
-      // this.drawContect.fillRect(i * barWidth, offset, barWidth, 10)
+      this.drawContext.fillRect(i * barWidth, offset, barWidth, height);
     }
 
     // // Draw the time domain chart.
     console.log(this.times)
     for (var i = 0; i < this.analyser.frequencyBinCount; i++) {
       var value = this.times[i];
-      this.drawContext.fillStyle = '#74c76e';
+      this.drawContext.fillStyle = 'hsl(' + hue + ', 100%, 50%)';
       this.drawContext.fillRect(i, value, 1, 2);
     }
 

@@ -29,7 +29,6 @@ class JsonViewer {
     })
     this.page.addEventListener('keyup', (e) => {
       if (this.temp == "KeyV") {
-        console.log("Test")
         this.temp = ""
         this.page.value = JSON.stringify(JSON.parse(this.page.value), null, 4)
         let obj = {}
