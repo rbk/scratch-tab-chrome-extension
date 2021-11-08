@@ -10,9 +10,11 @@ function initCrossTabStorage() {
     }
   });
 
-  // this should not run on active tab
+  // Sync tabs
+  // Event for other open tabs to update when the value changes in the active tab
   chrome.storage.onChanged.addListener(function(changes, namespace) {
-    if(changes.scratchtab &&  code.value != changes.scratchtab.newValue) {
+    const isActiveTab = document.activeElement.id === 'hidden-textarea';
+    if(!isActiveTab && changes.scratchtab && code.value != changes.scratchtab.newValue) {
       code.value = changes.scratchtab.newValue;
     }
   });
@@ -20,9 +22,11 @@ function initCrossTabStorage() {
   document.addEventListener('keyup', function(e){
     var value = code.value;
     var obj = {}
-    obj[key] = value
-    chrome.storage.local.set(obj, function(res) {
-    });
+    obj[key] = value;
+      // TODO thottle this?
+      chrome.storage.local.set(obj, function(res) {
+        // console.log(res)
+      });
   });
 
 }
