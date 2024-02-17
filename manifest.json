@@ -1,28 +1,22 @@
 {
   "name": "Scratch Tab",
   "version": "0.0.8",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "permissions" : [
     "storage",
     "tabs"
   ],
   "description": "Tab for temporary text space. Syncs for all new tabs",
-  "homepage_url": "http://richardkeller.net",
+  "homepage_url": "https://richardkeller.net",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "background" : {
-    "scripts" : []
-  },
   "chrome_url_overrides": {
     "newtab": "src/override/override.html"
   },
-  "web_accessible_resources": [
-    "images/*.png"
-  ],
   "browser_action": {
       "default_icon": "icons/icon16.png"
   }
